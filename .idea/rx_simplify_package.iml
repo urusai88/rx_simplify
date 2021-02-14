@@ -3,11 +3,12 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/rx_simplify/.pub" />
-      <excludeFolder url="file://$MODULE_DIR$/rx_simplify/build" />
       <excludeFolder url="file://$MODULE_DIR$/rx_simplify_flutter/build" />
       <excludeFolder url="file://$MODULE_DIR$/rx_simplify_flutter/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/rx_simplify_flutter/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/rx_simplify/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/rx_simplify/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/rx_simplify/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
