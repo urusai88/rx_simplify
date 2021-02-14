@@ -3,22 +3,24 @@ import 'package:rxdart/rxdart.dart';
 class SubjectFactoryMixin {
   final _sinkList = <Sink>[];
 
+  BehaviorSubject<T> _create<T>(BehaviorSubject<T> subject) {
+    _sinkList.add(subject);
+
+    return subject;
+  }
+
   BehaviorSubject<T> seeded<T>(
     T value, {
     void Function()? onListen,
     void Function()? onCancel,
     bool sync = false,
   }) {
-    final subject = BehaviorSubject.seeded(
+    return _create(BehaviorSubject.seeded(
       value,
       onListen: onListen,
       onCancel: onCancel,
       sync: sync,
-    );
-
-    _sinkList.add(subject);
-
-    return subject;
+    ));
   }
 
   BehaviorSubject<T> behavior<T>({
@@ -26,15 +28,11 @@ class SubjectFactoryMixin {
     void Function()? onCancel,
     bool sync = false,
   }) {
-    final subject = BehaviorSubject<T>(
+    return _create(BehaviorSubject<T>(
       onListen: onListen,
       onCancel: onCancel,
       sync: sync,
-    );
-
-    _sinkList.add(subject);
-
-    return subject;
+    ));
   }
 
   void closeSinks() {
