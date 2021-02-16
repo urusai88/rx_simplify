@@ -1,6 +1,7 @@
 name: rx_simplify_flutter
 description: A new Flutter package.
-version: 0.0.2
+version: 0.0.3-dev.1
+repository: https://github.com/urusai88/rx_simplify
 
 environment:
   sdk: '>=2.12.0-0 <3.0.0'
@@ -9,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  rxdart: 0.26.0-nullsafety.1
+  rxdart: ^0.26.0-nullsafety.1
 
 dev_dependencies:
   flutter_test:
